@@ -8,3 +8,5 @@ comment-service:
   base-url: http://comment-service:8002
 
 logging.config: classpath:log4j2-spring.xml
+
+environment: docker

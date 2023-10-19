@@ -5,3 +5,5 @@ spring:
     banner-mode: "off"
 
 logging.config: classpath:log4j2-spring.xml
+
+environment: docker
