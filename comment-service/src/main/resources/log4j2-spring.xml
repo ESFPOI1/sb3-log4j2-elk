@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="DEBUG">
+    <Appenders>
+        <Console name="LogToConsole" target="SYSTEM_OUT">
+            <EcsLayout serviceName="comment-service" serviceVersion="0.1.0" serviceEnvironment="docker" serviceNodeName="node1"/>
+        </Console>
+        <File name="LogToFile" fileName="logs/comment-service.log">
+            <EcsLayout serviceName="comment-service" serviceVersion="0.1.0" serviceEnvironment="docker" serviceNodeName="node1"/>
+        </File>
+    </Appenders>
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="LogToFile"/>
+            <AppenderRef ref="LogToConsole"/>
+        </Root>
+    </Loggers>
+</Configuration>
