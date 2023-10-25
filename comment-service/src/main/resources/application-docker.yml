@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: comment-service
+  main:
+    banner-mode: "off"
+
+logging.config: classpath:log4j2-spring.xml
+
+environment: docker

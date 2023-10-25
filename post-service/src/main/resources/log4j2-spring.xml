@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="info">
+    <Properties>
+        <Property name="applicationName">${spring:spring.application.name}</Property>
+        <Property name="environment">${spring:environment}</Property>
+    </Properties>
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT" follow="true">
+            <JsonTemplateLayout>
+                <EventTemplateAdditionalField key="service.name" value="${applicationName}"/>
+                <EventTemplateAdditionalField key="event.dataset" value="${applicationName}"/>
+                <EventTemplateAdditionalField key="environment" value="${environment}"/>
+            </JsonTemplateLayout>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="Console" />
+        </Root>
+    </Loggers>
+</Configuration>
